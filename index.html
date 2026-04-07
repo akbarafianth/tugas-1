@@ -118,13 +118,33 @@
         <!-- Notif Pesan -->
          <div id="SubmitSukses" style="display: none;"></div>
          </section>
+        <div id="popupSukses" class="popup">
+            <div class="popup-content">
+                <h3>🎉 Pendaftaran Berhasil!</h3>
+                <p>Terima kasih sudah mendaftar di Seminar TRONJOL 2069</p>
+                <button onclick="tutupPopup()">Tutup</button>
+            </div>
+        </div>
     </main>
     <!-- footer -->
      <footer>
         <p>@2069 Seminar Teknologi - Universitas Josjis Bolo</p>
         <p>kontak: josjisbolo@univjosjis.ac.id | IG: @tronjol2069</p>
      </footer>
-     <script>
+    <script>
+    document.getElementById("FormPendaftaran").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        document.getElementById("popupSukses").style.display = "flex";
+
+        this.reset();
+    });
+
+    function tutupPopup() {
+        document.getElementById("popupSukses").style.display = "none";
+    }
+    </script>
+    <script>
         document.getElementById("FormPendaftaran").addEventListener("submit", function(e) {
             e.preventDefault();
             const notif = document.getElementById("SubmitSukses");
@@ -139,6 +159,6 @@
             }, 3000);
             this.reset();
         });
-     </script>
+    </script>
 </body>
 </html>
