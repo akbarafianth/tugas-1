@@ -1,0 +1,139 @@
+:root{
+  --primary: #4F46E5;
+  --secondary: #22C55E;
+  --background: #F9FAFB;
+  --text: #111827;
+  --accent: #F59E0B;
+}
+
+/* keseluruhan */
+body{
+    font-family: Arial, sans-serif;
+    background-color:var(--background);
+    color:var(--text);
+    font-size: 17px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* header */
+header{
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 30px 20px
+}
+.tagline{
+    margin-top: 10px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+/* layout utama */
+main{
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+/* section */
+section{
+    background: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-bottom: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+h2{
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+/* info event */
+.detail_event{
+    margin-top: 15px;
+}
+.detail_item{
+    margin-bottom: 8px;
+}
+.label{
+    font-weight: bold;
+    color: var(--primary);
+}
+
+/* table rundown */
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+thead{
+    background-color: var(--primary);
+    color: whit;
+}
+th, td{
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+tbody tr:hover{
+    background-color: #f3f4f6;
+}
+
+/* form */
+.form-group{
+    margin-bottom: 15px;
+}
+label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input, select{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+input:focus, select:focus{
+    border-color: var(--primary);
+    outline: none;
+}
+
+/* button */
+button{
+    width: 100%;
+    padding: 12px;
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn_daftar:hover{
+    background-color: var(--primary);
+}
+
+/* notif masuk */
+#SubmitSukses{
+    margin-top: 15px;
+    padding: 10px;
+    background-color: var(--secondary);
+    color: white;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* submit out */
+#SubmitSukses.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* footer */
+footer{
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary);
+    color: white;
+    margin-top: 30px;
+}

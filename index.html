@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event registration</title>
+</head>
+<body>
+    <header>
+        <h1>Seminar TRONJOL 2069 </h1>
+        <p>Universitas Josjis Bolo</p>
+        <p class="tagline">
+            <strong>Pastikan data yang anda inputkan benar dan sesuai dengan kehidupan nyata</strong>
+        </p>
+    </header>
+    <main>
+        <!-- info event -->
+        <section class="info">
+            <h2>Info Event</h2>
+            <p>
+                Seminar Tronjol 2069 adalah acara tahunan yang diadakan pada graha universitas josjis bolo yang mempertemukan mahasiswa, dosen, dan siswa SMA/SMK, mapuun siswa SMP. Untuk berkolaborasi mengenai perkembangan teknologi dan inovasi digital.
+            </p>
+            <div class="detail_event">
+                <div class="detail_item">
+                    <span class="label">📅 Tanggal : </span>
+                    <span>Sabtu,23 juni 2069</span>
+                </div>
+                <div class="detail_item">
+                    <span class="label">⏰ Waktu : </span>
+                    <span>08.00 - 17.00 WIB</span>
+                </div>
+                <div class="detail_item">
+                    <span class="label">📍 Lokasi : </span>
+                    <span>Aula gedung C, Universitas Josjis Bolo</span>
+                </div>
+                <div class="detail_item">
+                    <span class="label">👥 Peserta : </span>
+                    <span>300 Peserta</span>
+                </div>
+                <div class="detail_item">
+                    <span class="label">🎟️ HTM : </span>
+                    <span>100K (bonus konsumsi sekali)</span>
+                </div>
+            </div>
+        </section>
+        <!-- rundown acara -->
+         <section class="rundown">
+            <h2>Rundown Event</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Waktu</th>
+                        <th>Kegiatan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>08.00 - 08.30</td>
+                        <td>Registrasi Peserta</td>
+                    </tr>
+                    <tr>
+                        <td>08.30 - 09.00</td>
+                        <td>Pembukaan & Sambutan</td>
+                    </tr>
+                    <tr>
+                        <td>09.00 - 11.00</td>
+                        <td>Seminar sesi 1 : Webdev & AI</td>
+                    </tr>
+                    <tr>
+                        <td>11.00 - 12.00</td>
+                        <td>Sesi Tanya Jawab</td>
+                    </tr>
+                    <tr>
+                        <td>12.00 - 13.00</td>
+                        <td>Istirahat & Makan siang</td>
+                    </tr>
+                    <tr>
+                        <td>13.00 - 15.00</td>
+                        <td>Seminar sesi 2 : Cyber Security</td>
+                    </tr>
+                    <tr>
+                        <td>15.00 - 16.00</td>
+                        <td>Penutupan & Dokumentasi</td>
+                    </tr>
+                </tbody>
+            </table>
+         </section>
+         <!-- Registration Form -->
+         <section class="form_section">
+            <h2>Form Pendaftaran</h2>
+        <form id="FormPendaftaran">
+            <div class="form-group">
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" placeholder="Masukkan nama lengkap">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="contoh@gmail.com">
+            </div>
+            <div class="form-group">
+                <label for="nim">NIM / No Identitas</label>
+                <input type="text" id="nim" placeholder="Masukkan NIM atau NIK">
+            </div>
+            <div class="form-group">
+                <label for="jurusan">Jurusan/Asal instansi</label>
+                <input type="text" id="jurusan" placeholder="Contoh : Sistem informasi">
+            </div>
+            <div class="form-group">
+                <label for="sesi">Pilih Sesi yang Diminati</label>
+                <select id="sesi">
+                    <option>Sesi 1: Webdev & AI</option>
+                    <option>Sesi 2: Cyber Security</option>
+                </select>
+            </div>
+            <button type="submit" class = "btn_daftar">Daftar</button>
+        </form>
+        <!-- Notif Pesan -->
+         <div id="SubmitSukses" style="display: none;"></div>
+         </section>
+    </main>
+    <!-- footer -->
+     <footer>
+        <p>@2069 Seminar Teknologi - Universitas Josjis Bolo</p>
+        <p>kontak: josjisbolo@univjosjis.ac.id | IG: @tronjol2069</p>
+     </footer>
+     <script>
+        document.getElementById("FormPendaftaran").addEventListener("submit", function(e) {
+            e.preventDefault();
+            const notif = document.getElementById("SubmitSukses");
+            notif.style.display = "block";
+            notif.innerText = "Pendaftaran Sukses";
+            setTimeout(() => {
+                notif.classList.add("show");
+            },10);
+            setTimeout(() => {
+                notif.classList.remove("Show");
+                notif.style.display = "none";
+            }, 3000);
+            this.reset();
+        });
+     </script>
+</body>
+</html>
